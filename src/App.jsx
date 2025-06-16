@@ -4,6 +4,7 @@ import Login from "./components/login";
 import ProtecterRoute from "./components/protected-route";
 import PublicRoute from "./components/public-route";
 import Dashboard from "./components/dashboard";
+import Blog from "./components/blog";
 
 
 function App() {
@@ -21,6 +22,10 @@ function App() {
         <Route path="/dashboard" element={
           <ProtecterRoute>
           <Dashboard />
+          </ProtecterRoute>} /> 
+        <Route path="/blog/:id" element={
+          <ProtecterRoute>
+          <Blog />
           </ProtecterRoute>} /> 
       </Routes>
     </BrowserRouter>
